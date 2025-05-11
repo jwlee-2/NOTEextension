@@ -1,0 +1,36 @@
+{
+    "name": "note_expansion",
+    "description": "A simple note expansion tool",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icons/note_icon16.png",
+        "32": "icons/note_icon32.png",
+        "48": "icons/note_icon48.png",
+        "128": "icons/note_icon128.png"
+    },
+    "action": {
+        "default_popup": "mains/main.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    
+    },
+    "commands":{
+        "open_extension": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Q"
+            },
+            "description": "open the note expansion"
+        },
+        "save_note": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S"
+            },
+            "description": "save the note in other name"
+        }
+        
+    }
+    ,
+    "permissions": ["storage"]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>unddefined</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link rel="stylesheet" href="main.css">
+
+        <style>
+            title {
+                display: none;
+            }
+
+            :root[color-theme='light'] {
+                --surface-default: #ffffff;
+                --btn-default: #FFFFFF;
+                --hovered: #f9f9f9;
+                color:rgb(0, 0, 0);
+                --maincolor: black;
+                --bordercolor: #cacaca;
+                --btn-svg-hover: #FFA500;
+            }
+
+            :root[color-theme='dark'] {
+                --surface-default: #17171C;
+                --btn-default: #000000;
+                --hovered: rgb(9, 9, 9);
+                --maincolor:white;
+                --bordercolor: #202020;
+                --btn-svg-hover: gold;
+            }
+
+            .container {
+                display: flex;
+                position: relative;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 10px;
+                width: 350px;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                background-color: var(--surface-default);
+                transition: background-color 0.5s;
+                font-size: 15px;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 50px;
+                background-color: var(--btn-default);   
+                border-radius: 5px;
+                position: absolute;
+                
+            }
+
+            button:hover {
+                background-color: var(--hovered);
+                border: 1px outset; 
+                border-radius:5px;
+                transition: background-color 0.5s;
+            }
+
+
+            </style>
+
+        </head>
+
+    <body>
+        <button style="left:10%;"><h3>new note</h3></button>
+        <button style="right:10%;"><h3>open file</h3></button>
+        <!--아래로 50%만큼 내리고 dev note: tree changed로 텍스트 적기-->
+
+        <!-- Add this block -->
+        <div style="overflow:hiddlen; white-space:nowrap; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <h3>dev note: tree changed</h3>
+        </div>
+        <!-- End of added block -->
+
+        <script src='script.js'></script>
+    </body>
+
+</html>
